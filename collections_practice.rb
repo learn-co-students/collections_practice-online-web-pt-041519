@@ -1,4 +1,4 @@
-
+require "pry"
 def sort_array_asc(array)
   array.sort
 end
@@ -12,8 +12,32 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
-  new_array = []
-  new_array << array[0]
-  new_array << array[2]
-  new_array << array[1]
+  array[1], array[2] = array[2], array[1]
+  array
+end
+
+# def swap_elements_from_to(array, index, destination_index)
+#   array[index], array[destination_index] = array[destination_index], array[index]
+#   array
+# end
+
+def reverse_array(array)
+  array.reverse
+end
+
+def kesha_maker(array)
+  array.collect do |word|
+    word[2] = "$"
+    word
+  end
+end
+
+def find_a(array)
+  a_array = []
+  array.each do |word|
+    if word.start_with?("a")
+      a_array << word
+    end
+  end
+  a_array
 end
