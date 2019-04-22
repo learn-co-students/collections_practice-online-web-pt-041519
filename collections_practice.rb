@@ -33,5 +33,10 @@ def sum_array(adder)
 end
 
 def add_s(feets)
-  feets.each_with_index.collect each{|word,location|}
+  foot = []
+  foot = feets.collect do |word|
+    word << "s"
+end
+foot[1].delete!("s")
+foot
 end
